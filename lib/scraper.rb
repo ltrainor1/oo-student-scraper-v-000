@@ -3,7 +3,7 @@ require 'pry'
 
 class Scraper
 
-  attr_accessor :name, :location, :bio_url
+  attr_accessor :name, :location, :bio_url 
 
   def self.scrape_index_page(index_url)
     doc = Nokogiri::HTML(open(index_url))
@@ -24,6 +24,16 @@ class Scraper
     urls = []
     links = doc.css('.social-icon-container @href')
     links.each {|url| urls << url.value}
+    twitter = ""
+    linkedin = ""
+    github = ""
+    blog = ""
+    profile_quote = ""
+    bio = ""
+    urls.each do |url|
+      if url.include?('twitter')
+        twitter = url 
+      end 
     binding.pry
   end
 
