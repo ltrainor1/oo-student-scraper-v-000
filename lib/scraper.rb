@@ -33,7 +33,13 @@ class Scraper
     urls.each do |url|
       if url.include?('twitter')
         twitter = url
-      end
+      elsif url.include?('linkedin')
+        linkedin = url 
+      elsif url.include?('github')
+        github = url 
+      elsif url.length > 0 
+        blog = url 
+      end 
     end
     binding.pry
   end
