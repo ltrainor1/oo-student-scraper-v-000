@@ -21,7 +21,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     quote = doc.css('.profile_quote')
-    links = doc.css('.social-icon-container @href').second.value
+    links = doc.css('.social-icon-container @href')
     binding.pry
   end
 
