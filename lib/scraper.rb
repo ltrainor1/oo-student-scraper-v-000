@@ -34,7 +34,7 @@ class Scraper
       if url.include?('twitter')
         twitter = url
       end
-    end 
+    end
     binding.pry
   end
 
