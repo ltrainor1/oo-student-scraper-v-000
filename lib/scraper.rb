@@ -34,12 +34,14 @@ class Scraper
       if url.include?('twitter')
         twitter = url
       elsif url.include?('linkedin')
-        linkedin = url 
+        linkedin = url
       elsif url.include?('github')
-        github = url 
-      elsif url.length > 0 
-        blog = url 
-      end 
+        github = url
+      elsif url.length > 0
+        blog = url
+      else 
+        nil 
+      end
     end
     binding.pry
   end
