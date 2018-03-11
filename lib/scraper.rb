@@ -37,10 +37,8 @@ class Scraper
         linkedin = url
       elsif url.include?('github')
         github = url
-      elsif url.length > 0
+      else
         blog = url
-      else 
-        nil 
       end
     end
     binding.pry
